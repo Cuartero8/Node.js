@@ -1,13 +1,13 @@
 const PORT = 3000;
 import { createServer } from "node:http";
 
-const server = createServer( (res, req) => {
+const server = createServer( (req, res) => {
 
     console.log(`Server Active`);
 
-    req.statusCode = 200;
-    req.setHeader("Content-Type", "text/html");
-    req.end(`<html><h1>My first server, yeey!</h1></html>`);
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/html");
+    res.end(`<html><h1>My first server, yeey!</h1></html>`);
 
 });
 
